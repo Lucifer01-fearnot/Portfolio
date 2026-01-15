@@ -1,0 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@layer base {
+  :root {
+    /* Pure Black / Cyber-Noir Default */
+    --background: 240 10% 2%;
+    --foreground: 0 0% 100%;
+
+    --card: 240 10% 4%;
+    --card-foreground: 0 0% 100%;
+    --card-elevated: 240 10% 8%;
+
+    --popover: 240 10% 2%;
+    --popover-foreground: 0 0% 100%;
+
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 0 0% 100%;
+
+    --accent-crimson: 355 90% 45%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 100%;
+
+    --border: 240 3.7% 20%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+
+    --radius: 0.75rem;
+
+    /* Custom tokens */
+    --gradient-primary: linear-gradient(135deg, #3B82F6 0%, #E11D48 100%);
+    --gradient-surface: linear-gradient(180deg, rgba(10, 10, 12, 0.6) 0%, rgba(5, 5, 5, 0.9) 100%);
+    --shadow-glow: 0 0 50px -10px rgba(59, 130, 246, 0.4);
+    --shadow-card: 0 10px 40px -15px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.03);
+    --shadow-card-hover: 0 20px 50px -20px rgba(0, 0, 0, 0.9), 0 0 0 1px rgba(225, 29, 72, 0.3);
+
+    --font-display: 'Outfit', system-ui, sans-serif;
+    --font-body: 'Space Grotesk', system-ui, sans-serif;
+
+    --sidebar-background: 240 10% 2%;
+    --sidebar-foreground: 240 5% 65%;
+    --sidebar-primary: 355 90% 45%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 10% 10%;
+    --sidebar-accent-foreground: 0 0% 100%;
+    --sidebar-border: 240 10% 12%;
+    --sidebar-ring: 355 90% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased transition-colors duration-300;
+    font-family: var(--font-body);
+  }
+
+  /* Universal Dotted Grid Overlay */
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, currentColor 1px, transparent 1px);
+    background-size: 32px 32px;
+    opacity: 0.05;
+    pointer-events: none;
+    z-index: -1;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: var(--font-display);
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .text-gradient {
+    @apply bg-clip-text text-transparent;
+    background-image: var(--gradient-primary);
+  }
+
+  .text-gradient-crimson {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-[#E11D48];
+  }
+
+  .card-elevated {
+    background: var(--gradient-surface);
+    backdrop-filter: blur(16px);
+    box-shadow: var(--shadow-card);
+    @apply rounded-xl border border-white/5 transition-all duration-500;
+  }
+
+  .card-elevated:hover {
+    box-shadow: var(--shadow-card-hover);
+    @apply border-primary/40 -translate-y-2;
+  }
+
+  .glass {
+    @apply bg-black/20 backdrop-blur-xl border border-white/5;
+  }
+
+  .glow-red {
+    background: radial-gradient(circle, rgba(225, 29, 72, 0.15) 0%, transparent 70%);
+  }
+
+  .glow-blue {
+    background: radial-gradient(circle, rgba(59, 130, 246, 0.1) 0%, transparent 70%);
+  }
+
+  .section-container {
+    @apply max-w-6xl mx-auto px-6 md:px-8;
+  }
+
+  .skill-bar {
+    @apply h-2 rounded-full bg-muted overflow-hidden;
+  }
+
+  .skill-bar-fill {
+    @apply h-full rounded-full transition-all duration-700 ease-out;
+    background: var(--gradient-primary);
+  }
+}
+
+@layer utilities {
+  .animate-fade-up {
+    animation: fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-up-delay-1 {
+    animation: fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.1s forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-up-delay-2 {
+    animation: fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.2s forwards;
+    opacity: 0;
+  }
+
+  .animate-fade-up-delay-3 {
+    animation: fadeUp 0.6s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+    opacity: 0;
+  }
+
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -200% 0;
+    }
+
+    100% {
+      background-position: 200% 0;
+    }
+  }
+
+  .animate-shimmer {
+    background: linear-gradient(90deg,
+        hsl(var(--muted)) 0%,
+        hsl(var(--card-elevated)) 50%,
+        hsl(var(--muted)) 100%);
+    background-size: 200% 100%;
+    animation: shimmer 2s infinite;
+  }
+}
