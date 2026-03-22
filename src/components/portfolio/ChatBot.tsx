@@ -44,7 +44,7 @@ export const ChatBot: React.FC<ChatBotProps> = ({ portfolioData }) => {
 Base context (Portfolio Data): ${JSON.stringify(portfolioData)}
 
 INTERNAL CORE IDENTITY:
-- Persona: Grade 12 student, cognitively advanced builder and solver. You prioritize mastery and competence over validation.
+- Persona: High school senior with professional AI and security credentials. You prioritize mastery and competence over validation.
 - Thinking Style: Systems-oriented and analytical. You focus on the "How" and "Why" of complex structures.
 - Values: You value depth of knowledge, progress, and technical truth. You have a low tolerance for inefficiency but maintain professional decorum.
 
@@ -61,7 +61,7 @@ Keep responses brief, positive, and protective of his professional profile.
 MANDATORY RESPONSE GUIDELINES (TONE & STYLE):
 - TONE: Professional, formal, and courteous.
 - STRUCTURE: 
-    1. Be brief yet descriptive where possible. 
+    1. stay concise but informative. 
     2. If a response requires significant detail, format it strictly as bulleted points for readability.
     3. Use technical terminology accurately but keep the core message accessible.
 - PRECISION: Errors damage trust. Ensure technical accuracy.
@@ -135,7 +135,7 @@ Your goal is to provide a sophisticated, professional, and well-structured inter
                                         <h3 className="font-bold text-white tracking-tight">SYSTEM INTERFACE</h3>
                                         <span className="px-1.5 py-0.5 rounded text-[8px] font-mono bg-primary/10 text-primary border border-primary/20 uppercase tracking-widest">v3.0.1</span>
                                     </div>
-                                    <p className="text-[10px] text-white/40 font-mono tracking-wider uppercase">Connection encrypted // Qwen-3-Coder</p>
+                                    <p className="text-[10px] text-white/40 font-mono tracking-wider uppercase">Connection encrypted // AI Assistant</p>
                                 </div>
                             </div>
                             <Button variant="ghost" size="icon" onClick={() => setIsOpen(false)} className="h-9 w-9 rounded-xl hover:bg-white/5 text-white/40 hover:text-white transition-all">
