@@ -132,8 +132,8 @@ Your goal is to provide a sophisticated, professional, and well-structured inter
                                 </div>
                                 <div>
                                     <div className="flex items-center gap-2">
-                                        <h3 className="font-bold text-white tracking-tight">SYSTEM INTERFACE</h3>
-                                        <span className="px-1.5 py-0.5 rounded text-[8px] font-mono bg-primary/10 text-primary border border-primary/20 uppercase tracking-widest">v3.0.1</span>
+                                        <h3 className="font-bold text-white tracking-tight">Ask Anything 🙌</h3>
+                                        <span className="px-1.5 py-0.5 rounded text-[8px] font-mono bg-primary/10 text-primary border border-primary/20 uppercase tracking-widest">Rishi</span>
                                     </div>
                                     <p className="text-[10px] text-white/40 font-mono tracking-wider uppercase">Connection encrypted // AI Assistant</p>
                                 </div>
