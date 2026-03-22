@@ -44,7 +44,7 @@ Deno.serve(async (req) => {
                 model: MODEL_NAME,
                 messages: messages,
                 max_tokens: 1000,
-                temperature: 0.1,
+                temperature: 0.7,
             }),
         })
 
