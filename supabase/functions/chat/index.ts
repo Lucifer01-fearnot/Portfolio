@@ -1,6 +1,6 @@
 // Modernize the function using Deno.serve instead of the old std/http/server
 const HF_TOKEN = Deno.env.get('HF_TOKEN')
-const MODEL_NAME = "Qwen/Qwen3-Coder-480B-A35B-Instruct:novita"
+const MODEL_NAME = "Qwen/Qwen2.5-72B-Instruct"
 
 const corsHeaders = {
     'Access-Control-Allow-Origin': '*',
